@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>SupporTec</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="./IMG/logo.1.png" type="image/icon">
+</head>
+
+<body>
+  <img id="logo" src="./IMG/logo.1.png" alt="logo">
+  <div class="header-buttons">
+    <button onclick="abrirModal('login')">Entrar</button>
+    <button onclick="abrirModal('cadastro')">Cadastrar</button>
+  </div>
+  <nav class="navcor">
+    <h1>Suppor<span class="smurf">Tec</span></h1>
+    <div class="homebar">
+      <a href="../Formulario/index.html">Home</a>
+      <a href="./pages/sobre.html">Sobre</a>
+      <a href="./pages/contato.html">Contatos</a>
+      <a href="./pages/proposta.html">Nossa Proposta</a>
+    </div>
+  </nav>
+  <div id="modal-login" class="modal">
+    <h2>Formulário de Login</h2>
+    <form id="login-form">
+      <div class="input-group">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Entrar</button>
+    </form>
+    <button onclick="fecharModal('login')">Fechar</button>
+  </div>
+
+ 
+  <div id="modal-cadastro" class="modal">
+    <h2>Formulário de Cadastro</h2>
+    <div class="container" id="container">
+      <form id="userForm" onsubmit="return validaFormulario()">
+        <div class="input-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite o Nome" required>
+        </div>
+        <div class="input-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu E-mail" required>
+        </div>
+        <div class="input-group">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" placeholder="Digite a senha">
+          <i id="olhoicon" class="fa fa-eye" onclick="olhoPassword()"></i>
+        </div>
+        <div class="input-group">
+          <label for="confirmSenha">Confirmação de Senha:</label>
+          <input type="password" id="confirmSenha" name="confirmSenha" minlength="8" placeholder="Confirma Senha"
+            required>
+          <i id="olhoicon2" class="fa fa-eye" onclick="olhoPassword2()"></i>
+        </div>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+    
+    <button onclick="fecharModal('cadastro')">Fechar</button>
+  </div>
+  <img id="outra" src="./IMG/logo.1.png" alt="">
+  <div id="container">
+    <div id="texto-texto">
+      <h1>SEJA BEM-VINDO Á Suppor<span class="smurf">Tec</span></h1>
+      <br>
+      <p id="bota">A SupporTec é uma empresa especializada na falta de estruturação de atendimento ao cliente,
+        oferecendo soluções
+        inovadoras e personalizadas para garantir que as organizações ofereçam um serviço excepcional aos seus clientes.
+        Reconhecemos a importância fundamental do atendimento ao cliente para o sucesso de qualquer empresa e entendemos
+        que a falta de estruturação nessa área pode resultar em desafios significativos.
+        <br>
+        Nossos serviços visam abordar as lacunas existentes na estrutura de atendimento ao cliente, proporcionando
+        melhorias tangíveis que impactam certamente a experiência do cliente.
+        <br>
+        Ao escolher a SupporTec, as empresas podem esperar uma transformação positiva em sua abordagem ao atendimento ao
+        cliente, resultando em maior satisfação do cliente, fidelização e, por fim, no sucesso geral do negócio. Estamos
+        comprometidos em ajudar nossos clientes a construir relacionamentos duradouros com seus clientes, superando
+        desafios e elevando seus padrões de atendimento ao cliente para níveis excepcionais.
+      </p>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+<footer>
+  <p>&copy; 2023 SupporTec. Todos os direitos reservados.</p>
+</footer>
+
+</html>
